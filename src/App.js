@@ -3,7 +3,7 @@ import { marked } from 'marked';
 import './App.css';
 
 const MarkdownPreviewer = () => {
-  const [markdownInput, setMarkdownInput] = useState('# Hello, World!');
+  const [markdownInput, setMarkdownInput] = useState('# Welcome to my GDSC task 1!');
   const [renderedHTML, setRenderedHTML] = useState('');
   const [theme, setTheme] = useState('light');
 
