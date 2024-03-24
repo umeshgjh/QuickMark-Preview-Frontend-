@@ -1,0 +1,129 @@
+.markdown-previewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.toolbar button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.toolbar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.editor-preview {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.editor,
+.preview {
+  flex: 1;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.editor textarea {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  resize: none;
+  background-color: transparent;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.editor textarea:focus {
+  outline: none;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.preview {
+  padding: 20px;
+  background-color: #f7f7f7;
+  overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme styles */
+.markdown-previewer.dark {
+  background: linear-gradient(135deg, #3e5151, #decba4);
+  color: #fff;
+}
+
+.markdown-previewer.dark .toolbar button {
+  background-color: #444;
+  color: #fff;
+}
+
+.markdown-previewer.dark .toolbar button:hover {
+  background-color: #555;
+}
+
+.markdown-previewer.dark .editor,
+.markdown-previewer.dark .preview {
+  background-color: #333;
+  color: #fff;
+}
+
+.markdown-previewer.dark .editor textarea {
+  color: #fff;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.markdown-previewer.dark .editor textarea:focus {
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.markdown-previewer.dark .preview {
+  background-color: #444;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .editor-preview {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .editor,
+  .preview {
+    height: 300px;
+  }
+}
